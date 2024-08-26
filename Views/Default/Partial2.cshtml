@@ -1,0 +1,32 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Blog>
+<div class="padding1">
+    <h4>Sizin Seçimlerinizle En İyi Tatiller</h4>
+    <div class="box-left">
+        @foreach (var x in Model)
+        {
+            <div class="bot-img">
+                <img src="@x.BlogImage" style="width:130px; height:75px;" alt="" />
+            </div>
+            <div class="bot-desc">
+                <p>@x.Aciklama.Substring(0,77)... </p>
+            </div>
+            <div class="clear"></div>
+            @*<div class="bot-img">
+                <img src="~/web/images/pic7.jpg" alt="" />
+            </div>
+            <div class="bot-desc">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+            </div>
+            <div class="clear"></div>
+            <div class="bot-img">
+                <img src="~/web/images/pic8.jpg" alt="" />
+            </div>
+            <div class="bot-desc">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+            </div>
+            <div class="clear"></div>*@
+        }
+    </div>
+    @Html.Action("Partial3", "Default")
+</div>

@@ -1,0 +1,108 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot">Hızlı Kolay Tatil Planı</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restorantlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuş Güzargahı</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yapılacaklar Listesi<p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Tatil Fırsatları</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" @*style="width:650px;height:365px;*@>
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                    
+                                    <li><img src="@x.BlogImage" alt="" style="width: 650px; height:365px "></li>
+                                    @*<li><img src="images/img2.jpg" alt=""></li>
+                                        <li><img src="images/img3.jpg" alt=""></li>
+                                        <li><img src="images/img4.jpg" alt=""></li>*@
+                                }
+                            </ul>
+                            <a href="#" class="callbacks_nav callbacks1_nav prev">Previous</a>
+                            <a href="#" class="callbacks_nav callbacks1_nav next">Next</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    @*<div class"content">*@
+    <div class="wrap">
+        <div class="wrapper">
+            <div class="con-top">
+                <h3>Tatil Şirketimize Hoşgeldin!</h3>
+                <p>
+                    Yoğun iş temposundan uzaklaşıp, huzurlu ve unutulmaz anılar biriktireceğiniz bir tatil planlamak için doğru yerdesiniz. Uzman ekibimizle birlikte, sizin için en uygun tatil seçeneklerini sunarak hayalinizdeki tatili gerçeğe dönüştürüyoruz. İster egzotik bir adada dinlenmek, ister tarihi ve kültürel zenginlikleri keşfetmek isteyin, tatil şirketimiz her türlü ihtiyacınıza yönelik çözümlerle yanınızda. Bize güvenin, tatilin keyfini çıkarın!
+                </p>
+            </div>
+
+            <div class="grids">
+                <div class="box1">
+                    @Html.Action("Partial1", "Default")
+                    @Html.Action("Partial2", "Default")
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
